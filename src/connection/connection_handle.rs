@@ -1,4 +1,5 @@
 use std::{
+    iter::repeat_with,
     sync::{
         atomic::{AtomicBool, Ordering},
         Arc, Weak,
@@ -115,8 +116,7 @@ where
                     break;
                 };
 
-                // TODO: make it random?
-                let payload = vec![42u8];
+                let payload: Vec<_> = repeat_with(|| fastrand::u8(0..255)).take(10).collect();
 
                 if let Err(e) = sink
                     .lock_owned()
@@ -150,9 +150,6 @@ where
         if let Err(e) = futures::executor::block_on(async move {
             let mut sink = sink.lock_owned().await;
 
-            // XXX: To be confirmed, but probably we do not need to send a close frame manually -- WebSocket library
-            // should take care of that.
-            // sink.feed(Message::Close(None)).await?;
             sink.flush().await?;
             sink.close().await?;
 

@@ -28,6 +28,7 @@ futures = "0.3.28"
 humantime-serde = "1.1.1"
 cancellable = "0.3.0"
 async-trait = "0.1.72"
+fastrand = "2.0.0"
 
 [dev-dependencies]
 anyhow = "1.0.71"
