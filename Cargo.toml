@@ -1,7 +1,16 @@
 [package]
 name = "reception"
 version = "0.1.0"
+authors = ["Kamil Rusin <kamil.jakub.rusin@gmail.com>"]
 edition = "2021"
+description = "A Rust library for creating TCP listeners that spawns clients providing model abstraction layer."
+readme = "README.md"
+homepage = "https://github.com/nathiss/reception"
+repository = "https://github.com/nathiss/reception"
+license = "MIT"
+keywords = ["tokio", "service", "networking", "listener"]
+categories = ["asynchronous"]
+include = ["/src", "LICENSE.txt"]
 
 [dependencies]
 thiserror = "1.0.43"
