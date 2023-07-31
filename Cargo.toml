@@ -14,7 +14,7 @@ tokio = { version = "1.29.1", features = [
 ] }
 serde = { version = "1.0.170", features = ["derive"] }
 log = "0.4.19"
-tokio-tungstenite = "0.19.0"
+tokio-tungstenite = "0.20.0"
 futures-util = "0.3.28"
 futures = "0.3.28"
 humantime-serde = "1.1.1"
@@ -29,4 +29,4 @@ lazy_static = "1.4.0"
 log = "0.4.19"
 pin-project = "1.1.2"
 tokio = { version = "1.29.1", features = ["net", "time", "rt", "io-util"] }
-tokio-tungstenite = { version = "0.19.0", features = ["native-tls"] }
+tokio-tungstenite = { version = "0.20.0", features = ["native-tls"] }
