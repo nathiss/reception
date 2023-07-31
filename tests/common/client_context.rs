@@ -3,7 +3,7 @@ use futures_util::{
     stream::{SplitSink, SplitStream},
     SinkExt, StreamExt,
 };
-use net::SenderHandle;
+use reception::SenderHandle;
 use tokio::sync::mpsc::{error::SendError, unbounded_channel, UnboundedReceiver};
 use tokio_tungstenite::tungstenite::Message;
 

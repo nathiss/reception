@@ -5,7 +5,7 @@ use std::{
 };
 
 use cancellable::{Cancellable, CancellableHandle};
-use net::ListenerConfig;
+use reception::ListenerConfig;
 use tokio::time::timeout;
 use tokio_tungstenite::MaybeTlsStream;
 

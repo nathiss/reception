@@ -2,7 +2,7 @@ mod common;
 
 use std::time::Duration;
 
-use net::ListenerConfig;
+use reception::ListenerConfig;
 use tokio::{io::AsyncWriteExt, time::timeout};
 use tokio_tungstenite::tungstenite::Message;
 

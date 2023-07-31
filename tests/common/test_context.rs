@@ -2,7 +2,7 @@ use std::{net::SocketAddr, time::Duration};
 
 use cancellable::{Cancellable, CancellableHandle, CancellationToken};
 
-use net::ListenerConfig;
+use reception::ListenerConfig;
 use tokio::{
     net::TcpStream,
     sync::mpsc::{error::SendError, unbounded_channel, UnboundedReceiver},

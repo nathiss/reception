@@ -1,4 +1,4 @@
-use net::{
+use reception::{
     client::{self},
     connection::Connection,
 };
@@ -12,4 +12,4 @@ pub(super) type WebSocketStream = tokio_tungstenite::WebSocketStream<MaybeTlsStr
 pub(super) type Client =
     client::Client<Connection<tokio_tungstenite::WebSocketStream<TcpStream>>, MockModel, MockModel>;
 
-pub(crate) type Listener = net::Listener<MockModel, MockModel>;
+pub(crate) type Listener = reception::Listener<MockModel, MockModel>;

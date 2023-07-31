@@ -9,11 +9,8 @@ use tokio::sync::mpsc::{error::SendError, unbounded_channel, UnboundedReceiver};
 
 use crate::SenderHandle;
 
-pub use self::error::ClientError;
-use self::{
-    client_handle::ClientHandle,
-    shared_state::{ClientHalf, ClientStatus, HandleHalf, SharedState},
-};
+use self::shared_state::{ClientHalf, ClientStatus, HandleHalf, SharedState};
+pub use self::{client_handle::ClientHandle, error::ClientError};
 
 #[derive(Debug)]
 pub struct Client<C, CM, SM>
