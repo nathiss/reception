@@ -6,7 +6,7 @@ use crate::connection::ConnectionConfig;
 
 use self::websocket_config::WebSocketConfig;
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Deserialize, Clone, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ListenerConfig {
     pub interface: String,
     pub port: u16,

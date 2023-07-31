@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use serde::Deserialize;
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Deserialize, Clone, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ConnectionConfig {
     /// An interval used for delaying ping message send from the server to its clients.
     #[serde(with = "humantime_serde")]
