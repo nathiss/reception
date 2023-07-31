@@ -1,0 +1,30 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#9fd1b4",
+        "activityBar.background": "#9fd1b4",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#8968b7",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#9fd1b4",
+        "statusBar.background": "#7dc099",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#5baf7e",
+        "statusBarItem.remoteBackground": "#7dc099",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#7dc099",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#7dc09999",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#7dc099",
+    "cSpell.words": [
+        "Clippy",
+        "Deque",
+        "humantime",
+        "katyo",
+        "thiserror",
+        "tungstenite"
+    ]
+}

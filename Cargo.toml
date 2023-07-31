@@ -1,0 +1,32 @@
+[package]
+name = "net"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+thiserror = "1.0.43"
+tokio = { version = "1.29.1", features = [
+    "net",
+    "sync",
+    "time",
+    "parking_lot",
+] }
+serde = { version = "1.0.170", features = ["derive"] }
+log = "0.4.19"
+tokio-tungstenite = "0.19.0"
+futures-util = "0.3.28"
+futures = "0.3.28"
+humantime-serde = "1.1.1"
+cancellable = "0.3.0"
+async-trait = "0.1.72"
+
+[dev-dependencies]
+anyhow = "1.0.71"
+ctor = "0.2.3"
+env_logger = "0.10.0"
+lazy_static = "1.4.0"
+log = "0.4.19"
+pin-project = "1.1.2"
+tokio = { version = "1.29.1", features = ["net", "time", "rt", "io-util"] }
+tokio-tungstenite = { version = "0.19.0", features = ["native-tls"] }
