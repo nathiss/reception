@@ -3,9 +3,17 @@ use tokio_tungstenite::tungstenite::protocol::WebSocketConfig as InternalWebSock
 
 const MEGA: usize = 1024 * 1024;
 
+/// Configuration for WebSockets.
 #[derive(Debug, Deserialize, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub struct WebSocketConfig {
+    /// Maximum message size.
+    ///
+    /// Default: `16MB`
     pub max_message_size: usize,
+
+    /// Maximum frame size.
+    ///
+    /// Default: `4MB`
     pub max_frame_size: usize,
 }
 

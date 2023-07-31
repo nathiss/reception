@@ -13,6 +13,7 @@ use super::{
     ClientError,
 };
 
+/// Sending half of the peer's connection.
 #[derive(Debug)]
 pub struct ClientHandle<C, SM>
 where
@@ -38,6 +39,9 @@ where
         }
     }
 
+    /// Closes both sending and receiving halves of the peer's connection.
+    ///
+    /// This method _should_ only be called once. Consecutive calls to of this method have no effect.
     pub async fn close(&self) {
         drop(self.inner.lock().await.take());
     }

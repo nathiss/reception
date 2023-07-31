@@ -15,6 +15,7 @@ use crate::{client::Client, connection::Connection, ListenerConfig, ListenerErro
 
 type ClientConnection = Connection<WebSocketStream<TcpStream>>;
 
+/// Binds to a configured port and accepts incoming connections.
 #[derive(Debug)]
 pub struct Listener<CM, SM>
 where
@@ -36,6 +37,15 @@ where
     CM: Send + Sync + 'static,
     SM: Send + Sync + 'static,
 {
+    /// Constructs the listener and binds it to the configured socket.
+    ///
+    /// # Arguments
+    ///
+    /// * `config` - configuration for the listener and all its clients.
+    /// * `cancellation_token` - cancels the listener, unbinding it from the socket and sends a termination signal to
+    /// all clients spawned from this listener.
+    ///
+    /// # Returns
     pub async fn bind(
         config: ListenerConfig,
         cancellation_token: CancellationToken,

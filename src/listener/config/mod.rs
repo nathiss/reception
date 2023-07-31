@@ -4,13 +4,25 @@ use serde::Deserialize;
 
 use crate::connection::ConnectionConfig;
 
-use self::websocket_config::WebSocketConfig;
+pub use self::websocket_config::WebSocketConfig;
 
+/// Configures the listener.
 #[derive(Debug, Deserialize, Clone, PartialEq, Eq, PartialOrd, Ord)]
 pub struct ListenerConfig {
+    /// Interface to which the listener will bind.
+    ///
+    /// Default: `"127.0.0.1"`
     pub interface: String,
+
+    /// Port to which the listener will bind.
+    ///
+    /// Default: `8080`
     pub port: u16,
+
+    /// Configuration for WebSockets.
     pub websocket_config: WebSocketConfig,
+
+    /// Configuration for peer connections.
     pub connection_config: ConnectionConfig,
 }
 

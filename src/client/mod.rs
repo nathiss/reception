@@ -12,6 +12,7 @@ use crate::SenderHandle;
 use self::shared_state::{ClientHalf, ClientStatus, HandleHalf, SharedState};
 pub use self::{client_handle::ClientHandle, error::ClientError};
 
+/// Receiving half of the peer's connection.
 #[derive(Debug)]
 pub struct Client<C, CM, SM>
 where

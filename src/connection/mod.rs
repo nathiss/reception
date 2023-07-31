@@ -28,6 +28,9 @@ pub use self::config::ConnectionConfig;
 /// Type used for transferring data in and out of the connection.
 pub(crate) type Data = Vec<u8>;
 
+/// Receiving layer of peer's connection.
+///
+/// Handles protocol internals and keeps connection alive.
 #[derive(Debug)]
 pub struct Connection<S>
 where
