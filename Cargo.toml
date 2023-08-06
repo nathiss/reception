@@ -1,6 +1,6 @@
 [package]
 name = "reception"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Kamil Rusin <kamil.jakub.rusin@gmail.com>"]
 edition = "2021"
 description = "A Rust library for creating TCP listeners that spawns clients providing model abstraction layer."
