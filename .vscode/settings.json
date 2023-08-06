@@ -25,6 +25,7 @@
         "fastrand",
         "humantime",
         "katyo",
+        "struct",
         "thiserror",
         "tungstenite"
     ]
