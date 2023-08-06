@@ -4,7 +4,6 @@ use std::{
         atomic::{AtomicBool, Ordering},
         Arc, Weak,
     },
-    vec,
 };
 
 use async_trait::async_trait;

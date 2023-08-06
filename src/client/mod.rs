@@ -4,8 +4,9 @@ mod shared_state;
 
 use std::{fmt::Display, marker::PhantomData};
 
-use cancellable::{Cancellable, CancellableHandle, CancellationResult, CancellationToken};
+use cancellable::{Cancellable, CancellableHandle, CancellationResult};
 use tokio::sync::mpsc::{error::SendError, unbounded_channel, UnboundedReceiver};
+use tokio_util::sync::CancellationToken;
 
 use crate::SenderHandle;
 

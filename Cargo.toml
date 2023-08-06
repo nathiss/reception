@@ -1,6 +1,6 @@
 [package]
 name = "reception"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Kamil Rusin <kamil.jakub.rusin@gmail.com>"]
 edition = "2021"
 description = "A Rust library for creating TCP listeners that spawns clients providing model abstraction layer."
@@ -29,6 +29,7 @@ humantime-serde = "1.1.1"
 cancellable = "0.3.0"
 async-trait = "0.1.72"
 fastrand = "2.0.0"
+tokio-util = "0.7.8"
 
 [dev-dependencies]
 anyhow = "1.0.71"

@@ -3,13 +3,13 @@ pub(crate) mod error;
 
 use std::{marker::PhantomData, net::SocketAddr};
 
-use cancellable::{Cancellable, CancellationResult, CancellationToken};
-
+use cancellable::{Cancellable, CancellationResult};
 use tokio::{
     net::{TcpListener, TcpStream},
     sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender},
 };
 use tokio_tungstenite::{accept_async_with_config, WebSocketStream};
+use tokio_util::sync::CancellationToken;
 
 use crate::{client::Client, connection::Connection, ListenerConfig, ListenerError};
 
@@ -46,6 +46,9 @@ where
     /// all clients spawned from this listener.
     ///
     /// # Returns
+    ///
+    /// `Ok(Self)` if it successfully bound to the socket. See
+    /// [`ListenerError`](`crate::listener::error::ListenerError`) for errors descriptions.
     pub async fn bind(
         config: ListenerConfig,
         cancellation_token: CancellationToken,
